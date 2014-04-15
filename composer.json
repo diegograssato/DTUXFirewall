@@ -1,0 +1,33 @@
+
+    "name": "diegograssato/dtux-firewall",
+    "description": "Módulo de autenticação e autorização via Zend\Acl",
+    "type": "library",
+    "license": "MIT",
+    "tags": [
+        "zend framework",
+        "zf2",
+        "module",
+        "dtux",
+        "dtux-base",
+        "base"
+    ],
+    "homepage": "https://github.com/diegograssato/DTUXFirewall",
+    "authors": [
+        {
+            "name": "Diego Pereira Grassato",
+            "email": "diego.grassato@gmail.com",
+            "homepage": "http://diegograssato.wordpress.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*@stable",
+        "spiffy/spiffy-routes": "dev-master",
+    },
+    "autoload": {
+        "psr-4": {
+            "DTUXFirewall\\" : "module/DTUXFirewall/src/DTUXFirewall"
+        }
+    }
+
+}

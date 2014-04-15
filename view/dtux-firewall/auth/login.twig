@@ -1,0 +1,52 @@
+{% extends 'auth/layout.twig'%}
+{% block content %}
+
+        {% set f = form.setAttribute('action', url('dtux-firewall-login', {'controller':'auth', 'action':'login'})) %}
+        {% set f = form.prepare() %}
+
+
+        {{ form().openTag(f)|raw }}
+        {% include 'layout/form/messenger.twig' %}
+
+        {% if (error) %}
+            <div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert">×</button><p>{{ translate(error) }}</p></div>
+        {% endif %}
+
+    <fieldset>
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+                {{ formRow(form.get('email'))|raw }}
+                <i class="icon-user"></i>
+            </span>
+        </label>
+
+        <label class="block clearfix">
+            <span class="block input-icon input-icon-right">
+
+                {{ formRow(form.get('password'))|raw }}
+                <i class="icon-lock"></i>
+            </span>
+        </label>
+
+
+
+        <div class="space"></div>
+
+        <div class="clearfix">
+            <label class="inline">
+                <input type="checkbox" class="ace" name="rememberme" />
+                <span class="lbl"> Lembrar de mim</span>
+            </label>
+
+            <button type="submit" class="width-35 pull-right btn btn-sm btn-primary">
+                <i class="icon-key"></i>
+                Login
+            </button>
+        </div>
+
+        <div class="space-4"></div>
+    </fieldset>
+        {{ form().closeTag()|raw }}
+
+
+{% endblock content %}

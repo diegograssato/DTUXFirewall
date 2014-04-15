@@ -1,0 +1,20 @@
+#Configuração do Controller e das View
+controllers:
+  invokables:
+    DTUXFirewall\Controller\Auth: DTUXFirewall\Controller\AuthController
+controller_plugins:
+  invokables:
+    DTUXFirewall\Controller\Plugin\Firewall: DTUXFirewall\Controller\Plugin\FirewallPlugin
+view_manager:
+  display_not_found_reason: true
+  display_exceptions: true
+  doctype: HTML5
+  not_found_template: error/404
+  exception_template: error/index
+  template_map:
+      auth/auth: module/DTUXFirewall/view/dtux-firewall/auth/index.twig
+      auth/login: module/DTUXFirewall/view/dtux-firewall/auth/login.twig
+      error/404: module/Assets/view/error/404.twig
+      error/index: module/Assets/view/error/index.phtml
+  template_path_stack:
+      - module/DTUXFirewall/view/
