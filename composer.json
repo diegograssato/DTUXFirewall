@@ -1,6 +1,6 @@
 {
     "name": "diegograssato/dtux-firewall",
-    "description": "Módulo de autenticação e autorização via Zend\Acl",
+    "description": "Módulo de autenticação e autorização via Zend Acl",
     "type": "library",
     "license": "MIT",
     "tags": [
